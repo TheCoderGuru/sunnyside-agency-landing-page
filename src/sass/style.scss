@@ -19,7 +19,6 @@ $font-extrabold: 800;
   box-sizing: border-box;
 }
 
-
 .header {
   background: url(../assets/images/desktop/image-header.jpg);
   background-size: cover;
@@ -99,23 +98,22 @@ $font-extrabold: 800;
     padding-inline-end: 1em;
     text-align: center;
     font-size: 18px;
-    line-height: 30px
-    ;
+    line-height: 30px;
     font-family: "Barlow", sans-serif;
-    margin-top: 2em;
+    margin-top: 1.5em;
     font-weight: 400;
     color: $dark-grayish-blue;
   }
 
-  &__image{
-      max-width: 100%;
+  &__image {
+    max-width: 100%;
   }
-
 
   &__button {
     display: grid;
     text-align: center;
     margin-block: 1em;
+    text-decoration: none;
     text-transform: uppercase;
     position: relative;
     font-family: "Fraunces", sans-serif;
@@ -123,7 +121,7 @@ $font-extrabold: 800;
     &::after {
       content: "";
       position: absolute;
-      border-bottom: 1px solid $yellow;
+      border-bottom: 3px solid $yellow;
     }
 
     &:visited {
@@ -136,4 +134,75 @@ $font-extrabold: 800;
       }
     }
   }
+
+  .grid__content-overlap {
+    position: relative;
+    top: -2.8rem;
+  }
+
+  .grid__image-extended {
+    height: 160%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .grid__image-extended-second {
+    height: 136%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .dark {
+    color: $very-dark-desaturated-blue;
+  }
+
+  .testimonial__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    letter-spacing: 0.3em;
+    color: $grayish-blue;
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+    font-family: "Fraunces", sans-serif;
+  }
+
+  .grid__img {
+    display: grid;
+    place-items: center;
+  }
+  .rounded-image {
+    border-radius: 50%;
+    height: 3em;
+    width: auto;
+  }
+
+  .grid__desc {
+    font-family: "Barlow", sans-serif;
+    color: $very-dark-desaturated-blue;
+    margin-block-start: 1.5em;
+    text-align: center;
+    padding-inline: 5.6em;
+    line-height: 1.8;
+  }
+
+  .grid__author {
+    text-align: center;
+    font-size: 1em;
+    margin-block-start: 2em;
+    font-family: "Fraunces", sans-serif;
+  }
 }
+
+.grid__author__position {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 2em;
+  }

@@ -79,7 +79,7 @@
   font-size: 18px;
   line-height: 30px;
   font-family: "Barlow", sans-serif;
-  margin-top: 2em;
+  margin-top: 1.5em;
   font-weight: 400;
   color: hsl(232deg, 10%, 55%);
 }
@@ -90,6 +90,7 @@
   display: grid;
   text-align: center;
   margin-block: 1em;
+  text-decoration: none;
   text-transform: uppercase;
   position: relative;
   font-family: "Fraunces", sans-serif;
@@ -97,7 +98,7 @@
 .grid__button::after {
   content: "";
   position: absolute;
-  border-bottom: 1px solid hsl(51deg, 100%, 49%);
+  border-bottom: 3px solid hsl(51deg, 100%, 49%);
 }
 .grid__button:visited {
   color: hsl(212deg, 27%, 19%);
@@ -106,4 +107,66 @@
   content: "";
   position: absolute;
   border-bottom: 3px solid hsl(51deg, 100%, 49%);
+}
+.grid .grid__content-overlap {
+  position: relative;
+  top: -2.8rem;
+}
+.grid .grid__image-extended {
+  height: 160%;
+  width: 100%;
+  object-fit: cover;
+}
+.grid .grid__image-extended-second {
+  height: 136%;
+  width: 100%;
+  object-fit: cover;
+}
+.grid .dark {
+  color: hsl(212deg, 27%, 19%);
+}
+.grid .testimonial__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.grid .testimonials__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  letter-spacing: 0.3em;
+  color: hsl(210deg, 4%, 67%);
+  margin-block-start: 2em;
+  margin-block-end: 2em;
+  font-family: "Fraunces", sans-serif;
+}
+.grid .grid__img {
+  display: grid;
+  place-items: center;
+}
+.grid .rounded-image {
+  border-radius: 50%;
+  height: 3em;
+  width: auto;
+}
+.grid .grid__desc {
+  font-family: "Barlow", sans-serif;
+  color: hsl(212deg, 27%, 19%);
+  margin-block-start: 1.5em;
+  text-align: center;
+  padding-inline: 5.6em;
+  line-height: 1.8;
+}
+.grid .grid__author {
+  text-align: center;
+  font-size: 1em;
+  margin-block-start: 2em;
+  font-family: "Fraunces", sans-serif;
+}
+
+.grid__author__position {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 2em;
 }
