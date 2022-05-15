@@ -4,8 +4,16 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .header {
   background: url(../assets/images/desktop/image-header.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
 }
 .header__title {
   text-align: center;
@@ -17,7 +25,15 @@
   letter-spacing: 0.2em;
 }
 .header__arrow {
-  display: flex;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  padding-block-end: 7em;
+  margin-block-start: 2em;
+}
+
+.centered {
+  display: grid;
   place-content: center;
   place-items: center;
 }
@@ -26,21 +42,65 @@
   display: flex;
   justify-content: space-between;
 }
-.navbar__navlinks {
-  display: none;
-}
 .navbar__logo {
   margin-inline-start: 2em;
   margin-block-start: 1.5em;
   display: inline-block;
 }
-.navbar__menu {
+.navbar__navlinks {
+  list-style-type: none;
+  margin-block-start: 1.5em;
+  display: flex;
+}
+.navbar__navlinks__link {
+  justify-content: space-between;
+  display: flex;
+  font-family: "Barlow", sans-serif;
   margin-inline-end: 2em;
-  margin-block-start: 1em;
-  object-fit: contain;
+}
+.navbar__menu {
+  display: none;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid__content {
+  padding: 2em;
+}
+.grid__title {
+  color: hsl(212deg, 27%, 19%);
+  font-family: "Fraunces", sans-serif;
+}
+.grid__description {
+  margin-inline: 2em;
+  padding-inline-end: 1em;
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+  margin-top: 2em;
+  font-weight: 400;
+  color: hsl(232deg, 10%, 55%);
+}
+.grid__button {
+  display: grid;
+  margin-inline: 8em;
+  margin-block: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  font-family: "Fraunces", sans-serif;
+}
+.grid__button::after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid yellow;
+}
+.grid__button:visited {
+  color: hsl(212deg, 27%, 19%);
+}
+.grid__button:visited::after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid yellow;
 }
