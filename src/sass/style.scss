@@ -159,6 +159,7 @@ $font-extrabold: 800;
   .testimonial__grid {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 1em;
   }
 
   .testimonials__title {
@@ -167,8 +168,8 @@ $font-extrabold: 800;
     font-size: 1.1em;
     letter-spacing: 0.3em;
     color: $grayish-blue;
-    margin-block-start: 2em;
-    margin-block-end: 2em;
+    margin-block-start: 4em;
+    margin-block-end: 4em;
     font-family: "Fraunces", sans-serif;
   }
 
@@ -184,8 +185,8 @@ $font-extrabold: 800;
 
   .grid__desc {
     font-family: "Barlow", sans-serif;
-    color: $very-dark-desaturated-blue;
-    margin-block-start: 1.5em;
+    color: $very-dark-grayish-blue;
+    margin-block-start: 1em;
     text-align: center;
     padding-inline: 5.6em;
     line-height: 1.8;
@@ -200,9 +201,69 @@ $font-extrabold: 800;
 }
 
 .grid__author__position {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-block-start: 2em;
+  text-align: center;
+  color: $grayish-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Barlow", sans-serif;
+  margin-block-start: 1em;
+  font-size: 1rem;
+  margin-block-end: 3em;
+}
+
+img{
+  max-width: 100%;
+}
+
+.image-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.footer{
+  background-color: $dark-moderate-cyan;
+
+  &__logo{
+    margin: 0 auto;
+    display: grid;
+    padding: 3em;
   }
+}
+
+.flex-items{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Barlow', sans-serif;
+}
+
+
+.flex-items-icons{
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-block-start: 2em;
+  align-items: center;
+  font-family: 'Barlow', sans-serif;
+}
+
+@media only screen and ( min-width: 1440px ){
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid__content{
+    padding: 6em;
+    display: grid;
+    order: -1;
+  }
+
+  .image-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}

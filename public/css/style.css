@@ -128,6 +128,7 @@
 .grid .testimonial__grid {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 1em;
 }
 .grid .testimonials__title {
   text-align: center;
@@ -135,8 +136,8 @@
   font-size: 1.1em;
   letter-spacing: 0.3em;
   color: hsl(210deg, 4%, 67%);
-  margin-block-start: 2em;
-  margin-block-end: 2em;
+  margin-block-start: 4em;
+  margin-block-end: 4em;
   font-family: "Fraunces", sans-serif;
 }
 .grid .grid__img {
@@ -150,8 +151,8 @@
 }
 .grid .grid__desc {
   font-family: "Barlow", sans-serif;
-  color: hsl(212deg, 27%, 19%);
-  margin-block-start: 1.5em;
+  color: hsl(213deg, 9%, 39%);
+  margin-block-start: 1em;
   text-align: center;
   padding-inline: 5.6em;
   line-height: 1.8;
@@ -165,8 +166,65 @@
 
 .grid__author__position {
   text-align: center;
+  color: hsl(210deg, 4%, 67%);
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Barlow", sans-serif;
+  margin-block-start: 1em;
+  font-size: 1rem;
+  margin-block-end: 3em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.footer {
+  background-color: hsl(168deg, 34%, 41%);
+}
+.footer__logo {
+  margin: 0 auto;
+  display: grid;
+  padding: 3em;
+}
+
+.flex-items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Barlow", sans-serif;
+}
+
+.flex-items-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
   margin-block-start: 2em;
+  align-items: center;
+  font-family: "Barlow", sans-serif;
+}
+
+@media only screen and (min-width: 1440px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid__content {
+    padding: 6em;
+    display: grid;
+    order: -1;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
